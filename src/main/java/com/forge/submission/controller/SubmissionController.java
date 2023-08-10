@@ -29,5 +29,11 @@ public class SubmissionController {
         SubmissionDto createdSubmission = submissionService.createSubmission(submissionDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdSubmission);
     }
-
+    
+    @PutMapping
+    public ResponseEntity<SubmissionDto> updateSubmission(@RequestBody SubmissionDto submissionDto) {
+        SubmissionDto createdSubmission = submissionService.createSubmission(submissionDto);
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(createdSubmission);
+    
+    }
 }
